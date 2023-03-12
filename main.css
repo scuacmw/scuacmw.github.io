@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
+
+*, *::before, *::after{
+	box-sizing: border-box;
+}
+
+body{
+	padding: 0;
+	margin: 0;
+	background-color: white;
+	font-family: Poppins, sans-serif;
+	font-size: 1rem;
+}
+
+.container{
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+article{
+	background-image: url(./mainPagePhotos/scdiPhoto.jpeg);
+	background-size: cover;
+}
+
+/*NAV BAR DESKTOP*/
+
+.logo{
+	display: flex;
+	align-items: center;
+}
+
+.mainNav ul{
+	display: flex;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.mainNav a{
+	color: white;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	margin-left: 5px;
+	text-decoration: none;
+}
+
+.mainNav li:hover, .mainNav a:hover{
+	color:#9a8ce1;
+	transform: scale(1.05);
+	transition: 0.3s;
+}
+
+
+.mainHeader{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 100px;
+	width: 100%;
+	background-color: #431d70;
+	padding-left: 40px;
+	padding-right: 40px;
+}
+
+/* if u want to make it clear add this id to the main header class*/
+.mainHeader#specialLanding{
+	background-color: rgba(0,0,0,0) !important;
+}
+
+/*NAV BAR MOBILE*/
+#mobileNav {
+	margin: auto 0;
+	display: none;
+	cursor: pointer;
+}
+
+#mobileNav div{
+	width: 35px;
+	height: 3px;
+	background-color: white;
+	margin: 6px 0;
+	transition: 0.4s;
+}
+
+.open .bar1 {
+	-webkit-transform: rotate(-45deg) translate(-6px, 6px);
+	transform: rotate(-45deg) translate(-6px, 6px);
+}
+
+.open .bar2 {
+	opacity: 0;
+}
+  
+.open .bar3 {
+	-webkit-transform: rotate(45deg) translate(-6px, -8px);
+	transform: rotate(45deg) translate(-6px, -8px);
+}
+
+.open .mobileMenu {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	list-style: none;
+	background-color: #431d70;
+}
+
+.open .mobileMenu a{
+	text-decoration: none;
+	color:white;
+	font-size: 1.5rem;
+}
+
+.open .mobileMenu li{
+	padding-bottom: 5vw;
+}
+
+.mobileMenu {
+	display: none;
+	position: absolute;
+	margin-top: 0px;
+	top: 100px;
+	left: 0;
+	height: calc(100vh - 100px);
+	width: 100%;
+}
+
+@media only screen and (max-width:900px){
+	.mainHeader .mainNav{
+		display:none;
+	}
+	#mobileNav{
+		display: block;
+	}
+}
+
+/*OPENING CODE SECTION*/
+.openingCode ul{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	font-size: 1.3rem;
+}
+
+.openingCode{
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	/*background-color: #431d70;
+	background-image: url(./mainPagePhotos/scdiPhoto.jpeg);
+	background-size: cover;*/
+	height: 850px;
+}
+
+.openingCode ul{
+	background-color: rgba(255,255,255,0.9);
+	padding-left: 7vw;
+	padding-right: 7vw;
+	padding-top: 7vh;
+	padding-bottom: 7vh;
+	border-radius: 12px;
+}
+/*see if you can add a little drop arrow in center to take you down to updates*/
+
+.mainTitle{
+	color: #431d70;
+	padding-top: 10px;
+	padding-bottom: 40px;
+}
+
+/*UPCOMING EVENTS*/
+#upcomingEvents{
+	box-sizing: border-box;
+	background-color: #431d70;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: center;
+	height: 36vh auto;
+	padding-top: 3vh;
+	padding-bottom: 3vh;
+	box-shadow: 0px 10px 10px 10px rgba(0,0,0, 0.3), 0px -10px 10px 10px rgba(0,0,0, 0.3) ;
+}
+
+#upcomingEvents img{
+	height: 30vh;
+	width: auto;
+	margin-right: 7vw;
+	margin-left: 7vw;
+	border: solid white 3px;
+	border-radius: 12px;
+}
+
+#upcomingEvents section{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	color: white;
+	padding: 20px;
+}
+
+#upcomingEvents h1{
+	margin-top: 0;
+}
+
+#upcomingEvents text{
+	font-size: 2rem;
+}
+
+#upcomingEvents p{
+	margin-bottom: 0px;
+}
+
+
+/*UPDATE SEC*/
+.updateSec{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-around;
+	margin-left: 180px;
+	margin-right: 180px;
+	margin-top: 100px;
+}
+
+.updateSec img{
+	min-width: 400px;
+	width: 30vw;
+	border: 8px solid #9a8ce1;
+	border-radius: 12px;
+}
+
+.updateText{
+	width: 40vw;
+	min-width: 200px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+
+.updateText .mainTitle{
+	padding-bottom: 0px !important;
+}
+
+
+
+/*ABOUT US SEC*/
+.container>h1{
+	color: #431d70;
+	text-align: center;
+	text-decoration: underline;
+}
+
+.aboutUsSec{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: flex-start;
+	margin-top: 10vh;
+	margin-bottom: 10vh;
+	margin-left: 5vw;
+	margin-right: 5vw;
+}
+
+.aboutUsPort{
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	min-width: 250px;
+	width: 25vw;
+	align-items: center;
+}
+
+.aboutUsPort p{
+	text-align: center;
+}
+
+.aboutUsPort img{
+	min-width: 200px;
+	width: 20vw;
+	height: auto;
+	border-radius: 50%;
+	margin-bottom: 10px;
+}
+
+/*FOOTER SECTION*/
+.connectFooter{
+	height: 200px;
+	display: flex;
+	border-top: 5px solid #431d70;
+	justify-content: space-between;
+	align-items: center;
+	padding-left: 140px;
+	padding-right: 140px;
+	background-color: lightgrey; /*this grey makes me want to kms*/
+}
+
+.connectFooter h1{
+	color: #431d70;
+	font-size: 2rem;
+}
+
+.connectFooter ul{
+	padding: 20px;
+	list-style: none;
+	display: flex;
+}
+
+.connectFooter a{
+	padding: 1rem;
+}
