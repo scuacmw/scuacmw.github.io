@@ -137,9 +137,12 @@ article{
 /*OPENING CODE SECTION*/
 .openingCode ul{
 	padding: 0;
-	margin: 0;
 	list-style: none;
-	font-size: 1.3rem;
+	font-size: min(1rem, 1.3rem);
+}
+
+.openingCode ul li:nth-child(4) {
+    font-size: min(2rem,2.5rem);
 }
 
 .openingCode{
@@ -159,6 +162,7 @@ article{
 	padding-top: 7vh;
 	padding-bottom: 7vh;
 	border-radius: 12px;
+	margin: 30px;
 }
 /*see if you can add a little drop arrow in center to take you down to updates*/
 
@@ -224,7 +228,7 @@ article{
 }
 
 .updateSec img{
-	min-width: 400px;
+	min-width: 380px;
 	width: 30vw;
 	border: 8px solid #9a8ce1;
 	border-radius: 12px;
