@@ -1,3 +1,4 @@
+/*GENERAL CSS*/
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
 
 *, *::before, *::after{
@@ -60,11 +61,6 @@ article{
 	background-color: #431d70;
 	padding-left: 40px;
 	padding-right: 40px;
-}
-
-/* if u want to make it clear add this id to the main header class*/
-.mainHeader#specialLanding{
-	background-color: rgba(0,0,0,0) !important;
 }
 
 /*NAV BAR MOBILE*/
@@ -149,9 +145,6 @@ article{
 	align-items: center;
 	display: flex;
 	justify-content: center;
-	/*background-color: #431d70;
-	background-image: url(./mainPagePhotos/scdiPhoto.jpeg);
-	background-size: cover;*/
 	height: 850px;
 }
 
@@ -164,7 +157,6 @@ article{
 	border-radius: 12px;
 	margin: 30px;
 }
-/*see if you can add a little drop arrow in center to take you down to updates*/
 
 .mainTitle{
 	color: #431d70;
