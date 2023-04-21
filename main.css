@@ -121,12 +121,24 @@ article{
 	width: 100%;
 }
 
+
+/*CHANGE NAV AND FOOTER DIMENSIONS TO FIT PHONE*/
 @media only screen and (max-width:900px){
 	.mainHeader .mainNav{
 		display:none;
 	}
 	#mobileNav{
 		display: block;
+	}
+	.connectFooter h1{
+		display: none;
+	}
+	.connectFooter{
+		width: 100%;
+		padding: 0px !important;
+		display: flex;
+		justify-content: center !important;
+		align-items: center !important;
 	}
 }
 
