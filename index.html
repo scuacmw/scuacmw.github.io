@@ -17,43 +17,40 @@
 	<title>ACM-W SCU</title>
 </head>
 <body class="container">
+	<header class="mainHeader">
+		<a href="index.html" class="logo">
+			<img src="./globalPhotos/LOGO.png" height="50"> <!--FIX UGLY ASS LOGO.-->
+		</a>
+		<nav class="mainNav">
+			<ul>
+				<li><a href="#aboutUs"><u>About Us</u></a></li>
+				<li><a href="board.html">Board</a></li>
+				<li><a href="calendar.html">Calendar</a></li>
+				<li><a href="newsletter.html">Newsletter</a></li>
+				<li><a href="https://hackforhumanity.io/" target="_blank">H4H</a></li>
+			</ul>
+		</nav>
+		<div id="mobileNav" onclick="toggleMobileMenu(this)">
+			<div class="bar1"></div>
+			<div class="bar2"></div>
+			<div class="bar3"></div>
+			<ul class="mobileMenu">
+				<li><a href="index.html"><u>About Us</u></a></li>
+				<li><a href="board.html">Board</a></li>
+				<li><a href="calendar.html">Calendar</a></li>
+				<li><a href="newsletter.html">Newsletter</a></li>
+				<li><a href="https://hackforhumanity.io/" target="_blank">H4H</a></li>
+			</ul>
+		</div>
+	</header>
+
 	<article>
 		<!--Nav bar is header, sorry I realize that is hella confusing-->
-		<header class="mainHeader">
-			<a href="index.html" class="logo">
-				<img src="./globalPhotos/LOGO.png" height="50"> <!--FIX UGLY ASS LOGO.-->
-			</a>
-			<nav class="mainNav">
-				<ul>
-					<li><a href="#aboutUs"><u>About Us</u></a></li>
-					<li><a href="board.html">Board</a></li>
-					<li><a href="calendar.html">Calendar</a></li>
-					<li><a href="newsletter.html">Newsletter</a></li>
-					<li><a href="https://hackforhumanity.io/" target="_blank">H4H</a></li>
-				</ul>
-			</nav>
-			<div id="mobileNav" onclick="toggleMobileMenu(this)">
-				<div class="bar1"></div>
-				<div class="bar2"></div>
-				<div class="bar3"></div>
-				<ul class="mobileMenu">
-					<li><a href="index.html"><u>About Us</u></a></li>
-					<li><a href="board.html">Board</a></li>
-					<li><a href="calendar.html">Calendar</a></li>
-					<li><a href="newsletter.html">Newsletter</a></li>
-					<li><a href="https://hackforhumanity.io/" target="_blank">H4H</a></li>
-				</ul>
+		<div id="landingGraphics">
+			<div class="openingCode">
+				<div id="typedtext"></div>
 			</div>
-		</header>
-
-		<!--Decorative header banner-->
-		<div class="openingCode">
-			<ul>
-				<li><text style="color:#9A8CE1">#include</text><text style="color:#1CC775">&ltSanta Clara University&gt</text></li>
-				<li><text style="color:#9A8CE1">#include</text><text style="color:#1CC775">&ltWomen in Computer Engineering&gt</text></li>
-				<li><text style="color:#B33E97">int</text><text style="color:#9A8CE1"> main</text><text style="color:#B33E97">(void)</text></li>
-				<li><text><text style="color:#431d70">printf(</text><text style="color:#1CC775">"WELCOME"</text><text style="color:#431d70">)</text></text></text></li>
-			</ul>
+			<img src="./mainPagePhotos/groupDiamond.png">
 		</div>
 	</article>
 
@@ -62,9 +59,9 @@
 		<img src="./mainPagePhotos/upcomingEvent.png">
 		<section>
 			<h1><b>UPCOMING EVENTS:</b></h1>
-			<text>Speaker Event: CEO of Mozilla</text>
-			<p>Monday May 1st, 2023</p>
-			<p>6PM in Bergin 116</p>
+			<text>Outdoor Day: ACM-W, SWE, and WinSTEM Collab</text>
+			<p>Thursday May 25th, 2023</p>
+			<p>6PM in SCDI Courtyard</p>
 		</section>
 	</div>
 
@@ -141,4 +138,47 @@
 		</ul>
 	</footer>
 </body>
+<script>
+	// set up text to print, each item in array is new line
+		var aText = new Array(
+		"#include Santa Clara University", 
+		"#include Women in Computer Engineering",
+		"int main(void)",
+		"printf(\"Welcome\")"
+		);
+		var iSpeed = 30; // time delay of print out
+		var iIndex = 0; // start printing array at this posision
+		var iArrLength = aText[0].length; // the length of the text array
+		var iScrollAt = 20; // start scrolling up at this many lines
+		
+		var iTextPos = 0; // initialise text position
+		var sContents = ''; // initialise contents variable
+		var iRow; // initialise current row
+		
+		function typewriter()
+		{
+		sContents =  ' ';
+		iRow = Math.max(0, iIndex-iScrollAt);
+		var destination = document.getElementById("typedtext");
+		
+		while ( iRow < iIndex ) {
+		sContents += aText[iRow++] + '<br />';
+		}
+		destination.innerHTML = sContents + aText[iIndex].substring(0, iTextPos) + "_";
+		if ( iTextPos++ == iArrLength ) {
+		iTextPos = 0;
+		iIndex++;
+		if ( iIndex != aText.length ) {
+		iArrLength = aText[iIndex].length;
+		setTimeout("typewriter()", 500);
+		}
+		} else {
+		setTimeout("typewriter()", iSpeed);
+		}
+		}
+
+
+		typewriter();
+
+</script>
 </html>

@@ -1,17 +1,22 @@
 body{
-    background: linear-gradient(180deg, #431D70 0%, rgba(67, 29, 112, 0.72) 100%);
+    background-color: white;
     background-repeat: no-repeat;
 }
 
 .headerTitle{
     font-size: 3rem;
-    color: white;
+    color: #431D70;
     display: flex;
     justify-content: center;
     text-decoration: underline;
     padding-left: 10px;
     padding-right: 10px;
+    align-items: center;
+    margin-top: 0px;
     text-align: center;
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
 }
 
 .profileContainer{
@@ -26,30 +31,46 @@ body{
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    color: white;
+    color: black;
     margin: 50px;
+    border-radius: 12px;
+    padding: 10px
 }
 
-.profileChild p{
-    width: 35vw;
-    min-width: 350px;
-    text-align: center;
-}
 
 .profileChild h2{
     font-size: 2rem;
-     /*color: #1CC775;*/
+    margin-bottom: 10px;
 }
 
 .profileChild h3{
-    font-style: italic;
-    /*color: #1CC775;*/
+    margin-top: 0px;
+    font-weight: lighter;
 }
 
 .profileChild img{
-    border-radius: 50%;
+    border-radius: 12px;
     width: 350px;
     height: 350px;
     object-fit: cover;
-    border: 8px solid #9a8ce1;
+    border: 3px solid #9a8ce1;
+}
+
+/*
+.profileChild:hover{
+    background-color: #F0F0F0;
+}*/
+
+.infoPopUp{
+    display: none;
+    margin: auto;
+    background-color: white;
+    border-radius: 12px;
+
+}
+
+.infoPopUp p{
+    width: 35vw;
+    min-width: 350px;
+    text-align: center;
 }

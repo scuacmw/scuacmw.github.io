@@ -1,15 +1,15 @@
 body{
     background: linear-gradient(180deg, #431D70 0%, rgba(67, 29, 112, 0.72) 100%);
     background-repeat: no-repeat;
-    background-image: url(./mainPagePhotos/newsletterBackground.tiff);
+    background-image: url(./boardBackground/acmwBackgrnd.png);
     background-size: cover;
     height: 100vh;
 }
 
 main{
     display: flex;
-    justify-content: flex-start;
-    margin-top: 5vh;
+    justify-content: center;
+    padding-top: 130px;
     margin-left: 5vw;
     margin-right: 5vw;
 }
@@ -23,7 +23,8 @@ main{
     /*height: 700px;*/
     height: 80vh;
     border-radius: 15px;
-    box-shadow: 10px 10px 7px rgba(0, 0, 0, 0.25);
+    /*box-shadow: 10px 10px 7px rgba(0, 0, 0, 0.25);*/
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
 }
 
 #mc_embed_signup_scroll{

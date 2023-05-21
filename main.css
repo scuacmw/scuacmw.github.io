@@ -14,17 +14,11 @@ body{
 }
 
 .container{
-	max-width: 100%;
+	max-width: 100vw;
 	margin: 0 auto;
 }
 
-article{
-	background-image: url(./mainPagePhotos/scdiPhoto.jpeg);
-	background-size: cover;
-}
-
 /*NAV BAR DESKTOP*/
-
 .logo{
 	display: flex;
 	align-items: center;
@@ -38,7 +32,7 @@ article{
 }
 
 .mainNav a{
-	color: white;
+	color: #431d70;
 	padding-left: 1rem;
 	padding-right: 1rem;
 	margin-left: 5px;
@@ -57,10 +51,13 @@ article{
 	justify-content: space-between;
 	align-items: center;
 	height: 100px;
-	width: 100%;
-	background-color: #431d70;
+	width: 100vw;
+	background-color: white;
 	padding-left: 40px;
 	padding-right: 40px;
+	z-index: 1;
+	position: fixed;
+	box-shadow: 0 0 20px lightgrey;
 }
 
 /*NAV BAR MOBILE*/
@@ -73,7 +70,7 @@ article{
 #mobileNav div{
 	width: 35px;
 	height: 3px;
-	background-color: white;
+	background-color: #431d70;
 	margin: 6px 0;
 	transition: 0.4s;
 }
@@ -98,12 +95,12 @@ article{
 	align-items: center;
 	justify-content: flex-start;
 	list-style: none;
-	background-color: #431d70;
+	background-color: white;
 }
 
 .open .mobileMenu a{
 	text-decoration: none;
-	color:white;
+	color:#431d70;
 	font-size: 1.5rem;
 }
 
@@ -118,7 +115,7 @@ article{
 	top: 100px;
 	left: 0;
 	height: calc(100vh - 100px);
-	width: 100%;
+	width: 100vw;
 }
 
 
@@ -134,60 +131,67 @@ article{
 		display: none;
 	}
 	.connectFooter{
-		width: 100%;
+		width: 100vw;
 		padding: 0px !important;
+		margin: 0px;
 		display: flex;
 		justify-content: center !important;
 		align-items: center !important;
 	}
+	.connectFooter ul{
+		padding: 0px !important;
+	}
+	.connectFooter img{
+		height:40px;
+	}
 }
 
 /*OPENING CODE SECTION*/
-.openingCode ul{
-	padding: 0;
-	list-style: none;
-	font-size: min(1rem, 1.3rem);
-}
-
-.openingCode ul li:nth-child(4) {
-    font-size: min(2rem,2.5rem);
-}
-
 .openingCode{
 	align-items: center;
 	display: flex;
 	justify-content: center;
-	height: 850px;
+	min-width: 375px;
+	width: 40vw;
+	margin: 0;
+	color: #1CC775;
+	font-size: max(1.75vw, 15px);
+	margin-right: 70px;
+	margin-left: 70px;
 }
 
-.openingCode ul{
-	background-color: rgba(255,255,255,0.9);
-	padding-left: 7vw;
-	padding-right: 7vw;
-	padding-top: 7vh;
-	padding-bottom: 7vh;
-	border-radius: 12px;
-	margin: 30px;
+#landingGraphics{
+	box-sizing: border-box;
+	width: 100vw;
+	height: 90vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap-reverse;
+	/*padding: 70px;*/
+	padding-top: 100px;
+	background-image: url(./boardBackground/acmwBackgrnd.png);
+	background-size: cover;
+    background-position: center;
 }
 
-.mainTitle{
-	color: #431d70;
-	padding-top: 10px;
-	padding-bottom: 40px;
+#landingGraphics img{
+	width: max(30vw, 340px);
 }
+
+
 
 /*UPCOMING EVENTS*/
 #upcomingEvents{
 	box-sizing: border-box;
-	background-color: #431d70;
+	background-color: #9a8ce1;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: flex-start;
 	align-items: center;
-	height: 36vh auto;
+	height: 30vh auto;
 	padding-top: 3vh;
 	padding-bottom: 3vh;
-	box-shadow: 0px 10px 10px 10px rgba(0,0,0, 0.3), 0px -10px 10px 10px rgba(0,0,0, 0.3) ;
 }
 
 #upcomingEvents img{
@@ -226,27 +230,28 @@ article{
 	flex-wrap: wrap;
 	align-items: center;
 	justify-content: space-around;
-	margin-left: 180px;
-	margin-right: 180px;
+	margin-left: auto;
+	margin-right: auto;
 	margin-top: 100px;
 }
 
 .updateSec img{
-	min-width: 380px;
-	width: 30vw;
-	border: 8px solid #9a8ce1;
+	width: max(30vw, 360px);
+	border: 5px solid #9a8ce1;
 	border-radius: 12px;
 }
 
 .updateText{
-	width: 40vw;
-	min-width: 200px;
+	width: max(220px, 40vw);
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: flex-start;
 }
 
+.updateText h1{
+	color:#431d70 !important;
+}
 
 .updateText .mainTitle{
 	padding-bottom: 0px !important;
@@ -296,18 +301,20 @@ article{
 /*FOOTER SECTION*/
 .connectFooter{
 	height: 200px;
+	width: 100vw;
 	display: flex;
-	border-top: 5px solid #431d70;
+	/*border-top: 5px solid #431d70;*/
 	justify-content: space-between;
 	align-items: center;
 	padding-left: 140px;
 	padding-right: 140px;
-	background-color: lightgrey; /*this grey makes me want to kms*/
+	background-color: rgba(28, 199, 117, 0.2) ; /*this grey makes me want to kms*/
 }
 
 .connectFooter h1{
 	color: #431d70;
 	font-size: 2rem;
+	font-weight: lighter;
 }
 
 .connectFooter ul{

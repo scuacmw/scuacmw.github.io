@@ -11,8 +11,9 @@ body{
     padding-bottom: 10vh;
 }
 
-h1{
+.calendarContainer h1{
     color:#431d70;
     font-size: 2.5rem;
     text-decoration: underline;
+    padding-top: 100px;
 }
