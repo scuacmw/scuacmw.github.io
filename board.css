@@ -32,14 +32,14 @@ body{
     justify-content: flex-start;
     align-items: center;
     color: black;
-    margin: 50px;
+    margin: 40px;
     border-radius: 12px;
     padding: 10px
 }
 
 
 .profileChild h2{
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin-bottom: 10px;
 }
 
@@ -49,7 +49,7 @@ body{
 }
 
 .profileChild img{
-    border-radius: 12px;
+    border-radius: 100px;
     width: 180px;
     height: 180px;
     object-fit: cover;
