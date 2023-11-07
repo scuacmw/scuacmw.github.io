@@ -39,11 +39,12 @@ body{
 
 
 .profileChild h2{
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     margin-bottom: 10px;
 }
 
 .profileChild h3{
+    font-size: 1.1rem;
     margin-top: 0px;
     font-weight: lighter;
 }
