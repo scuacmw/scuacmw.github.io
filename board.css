@@ -1,0 +1,77 @@
+body{
+    background-color: white;
+    background-repeat: no-repeat;
+}
+
+.headerTitle{
+    font-size: 3rem;
+    color: #431D70;
+    display: flex;
+    justify-content: center;
+    text-decoration: underline;
+    padding-left: 10px;
+    padding-right: 10px;
+    align-items: center;
+    margin-top: 0px;
+    text-align: center;
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.profileContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.profileContainer .profileChild{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    color: black;
+    margin: 40px;
+    border-radius: 12px;
+    padding: 10px
+}
+
+
+.profileChild h2{
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.profileChild h3{
+    font-size: 1.1rem;
+    margin-top: 0px;
+    font-weight: lighter;
+}
+
+.profileChild img{
+    border-radius: 100px;
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border: 3px solid #9a8ce1;
+}
+
+/*
+.profileChild:hover{
+    background-color: #F0F0F0;
+}*/
+
+.infoPopUp{
+    display: none;
+    margin: auto;
+    background-color: white;
+    border-radius: 12px;
+
+}
+
+.infoPopUp p{
+    width: 35vw;
+    min-width: 350px;
+    text-align: center;
+}
