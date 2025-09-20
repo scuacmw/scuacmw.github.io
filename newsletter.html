@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale = 1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="newsletter.css" />
+	<link rel="icon" href="circleLogo.png">
+    <script async defer>
+		function toggleMobileMenu(menu) {
+    		menu.classList.toggle('open');
+		}
+	</script>
+	<title>ACM-W SCU | Newsletter</title>
+</head>
+<body>
+	<!-- Same desktop/mobile nav as index -->
+    <header class="mainHeader">
+		<a href="index.html" class="logo">
+			<img src="./globalPhotos/LOGO.png" height="50">
+		</a>
+		<nav class="mainNav">
+			<ul>
+				<li><a href="index.html#aboutUs">About Us</a></li>
+				<li><a href="board.html">Board</a></li>
+				<li><a href="calendar.html">Calendar</a></li>
+				<li><a href="newsletter.html"><u>Newsletter</u></a></li>
+				<li><a href="https://hackforhumanity.io/" target="_blank">H4H</a></li>
+			</ul>
+		</nav>
+		<div id="mobileNav" onclick="toggleMobileMenu(this)">
+			<div class="bar1"></div>
+			<div class="bar2"></div>
+			<div class="bar3"></div>
+			<ul class="mobileMenu">
+				<li><a href="index.html">About Us</a></li>
+				<li><a href="board.html">Board</a></li>
+				<li><a href="calendar.html">Calendar</a></li>
+				<li><a href="newsletter.html"><u>Newsletter</u></a></li>
+				<li><a href="https://hackforhumanity.io/" target="_blank">H4H</a></li>
+			</ul>
+		</div>
+	</header>
+    <main>
+        <div class="signupBox">
+            <div id="mc_embed_signup">
+                <form action="https://facebook.us17.list-manage.com/subscribe/post?u=fdde31514ee30327007146546&amp;id=e3ac79e8a9&amp;f_id=008f4de0f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                <div id="mc_embed_signup_scroll">
+                    <h2>Subscribe to our Newsletter</h2>
+                    <h4>Stay up to date with news and events from ACM-W</h4>
+                    <div class="mc-field-group">
+                        <label for="mce-EMAIL">Email Address</label>
+                        <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" required>
+                        <span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span>
+                    </div>
+                    <div id="mce-responses" class="clear foot">
+                        <div class="response" id="mce-error-response" style="display:none"></div>
+                        <div class="response" id="mce-success-response" style="display:none"></div>
+                    </div>    
+                    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_fdde31514ee30327007146546_e3ac79e8a9" tabindex="-1" value=""></div>
+                    <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+                </div>
+                </form>
+            </div>
+            <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+
+        </div>
+    </main>
+
+</body>
+</html>
